@@ -31,13 +31,7 @@ pipeline{
             }
         }
         
-        stage('archive'){
-            steps{
-                echo 'this is the archive job'
-                archiveArtifacts '**/distribution/*.zip'
-            }
-        }
-    }
+     }
     
     post{
         always{
