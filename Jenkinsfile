@@ -30,6 +30,13 @@ pipeline{
                 sh 'npm run package'
             }
         }
+        
+        stage('Archive'){
+            steps{
+                echo 'this is the archive job'
+                archiveArtifacts '**/distribution/*.zip'
+            }
+        }
     }
     
     post{
